@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>x団地6059号室</title>
+</head>
+<body class="top">
+    <img class="bg_top" id="bg_1" src="./img/story_1.png" alt="" style="display: block;">
+    <img class="bg_top" id="bg_2" src="./img/ori.png" alt="" style="display: none;">
+    <img class="bg_top" id="bg_3" src="./img/genkan.png" alt="" style="display: none;">
+    <img class="bg_top" id="bg_4" src="./img/mori.png" alt="" style="display: none;">
+    <img id="te_value" class="text_box" src="./img/textbox.jpg" alt="">
+    <img class="no-hu" id="normal" src="./img/human_1.png" alt="" style="display: block;">
+    <img class="no-hu" id="black" src="./img/human_2.png" alt="" style="display: none;">
+    <img class="no-hu" id="happy" src="./img/human_3.png" alt="" style="display: none;">
+    <img class="bg_top1" id="bg_5" src="./img/key.png" alt="" style="display: none;">
+    <img class="hirou" id="key_get" src="./img/hirou.png" alt="" style="display: none;">
+    <img class="no-hu" id="miki" src="./img/miki.png" alt="" style="display: none;">
+    <img class="TEL" id="tel" src="./img/tel.png" alt="" style="display: none;">
+    <h3 class="search_title" id="s_t" style="display: none;">どの部屋を探索する？</h3>
+    <div class="search_list" id="s_l" style="display: none;" >
+        <img class="living" id="living" src="./img/living.png" alt="">
+        <img class="monooki" id="monooki" src="./img/monooki.png" alt="">
+        <img class="rougoku" id="rougoku" src="./img/rougoku.png" alt="">
+    </div>
+    <div class="search_list" id="s_l_1" style="display: none;" >
+        <img class="living" id="living_1" src="./img/living.png" alt="">
+        <img class="monooki" id="monooki_1" src="./img/monooki.png" alt="">
+        <img class="rougoku" id="rougoku_1" src="./img/rougoku.png" alt="">
+    </div>
+    <div class="search_list" id="s_l_2" style="display: none;" >
+        <img class="living" id="living_r" src="./img/living.png" alt="">
+        <img class="monooki" id="monooki_r" src="./img/monooki.png" alt="">
+        <img class="rougoku" id="rougoku_r" src="./img/rougoku.png" alt="">
+    </div>
+    <h3 id="q_t_1" style="display: none;">Q.スマホのロックを解除しよう</h3>
+    <div class="s_p" id="s_p" style="display: none;">
+        <img src="./img/smartphone.png" alt="">
+        <form id="form1" action="#">
+            <div class="inline" id="cl_none">
+                <h3>答え</h3>
+                <input type="text" class="box_1" id="input-message" placeholder="答えを入力してください。">
+            </div>
+            <p id="value_q_a"></p>
+            <input id="value_button" type="button" onclick="check_1()" value="答える！">
+        </form>
+    </div>
+    <div class="s_p_1" id="s_p_1" style="display: none;">
+        <h3 id="q_t_2" style="display: none;">Q.箱を開けるためメモに書いてある謎を解こう</h3>
+        <div class="q_img">
+            <img src="./img/q_1.jpg" alt="">
+            <img src="./img/keybord.jpg" alt="">
+        </div>
+        <form id="form2" action="#">
+            <div class="inline" id="cl_none">
+                <h3>答え</h3>
+                <input type="text" class="box_1" id="input-message1" placeholder="答えを入力してください。">
+            </div>
+            <p id="value_q_a"></p>
+            <input id="value_button" type="button" onclick="check_2()" value="答える！">
+        </form>
+    </div>
+    <div class="s_p" id="s_p_2" style="display: none;">
+        <h3 id="q_t_3" style="display: none;">Q.箱を開けるためメモに書いてある謎を解こう</h3>
+        <img src="./img/q_2.jpg" alt="">
+        <form id="form2" action="#">
+            <div class="inline" id="cl_none">
+                <h3>答え</h3>
+                <input type="text" class="box_1" id="input-message2" placeholder="答えを入力してください。">
+            </div>
+            <p id="value_q_a"></p>
+            <input id="value_button" type="button" onclick="check_3()" value="答える！">
+        </form>
+    </div>
+    <a class="value" id="monooki_v" style="display: none;">何やら怪しげな箱があったが今は他の部屋も探索してみよう。</a>
+    <a class="value" id="rougoku_v" style="display: none;">数日間ここで過ごしていたが特に変わったものは無さそうだ</a>
+    <a class="value" id="value-6" style="display: block;">自分: 「...なぁ結夢話がある」</a>
+    <a class="value" id="value-5" style="display: none;">結夢: 「何？話って」</a>
+    <a class="value" id="value-4" style="display: none;">自分: 「ごめん別れよう」</a>
+    <a class="value" id="value-3" style="display: none;">結夢: 「え？なんで？私なにか悪いことした？私のことずっと見てくれるんじゃなかったの？」</a>
+    <a class="value" id="value-2" style="display: none;">結夢: 「ずっと一緒にいてくれるんじゃなかったの？ねぇなんで？」</a>
+    <a class="value" id="value-1" style="display: none;">自分: 「もう束縛に耐えられないんだ。自分の人生を恋愛なんかで縛りたくない。」</a>
+    <a class="value" id="value"  style="display: none;">そういった次の瞬間、鈍い音とともに自分の体が地面に転がった</a>
+    <a class="value" id="value1" style="display: none;">結夢: 「君が悪いんだよ？約束を破って私を不幸にしようとするんだから。」</a>
+    <a class="value" id="value2" style="display: none;">彼女の手には血がついた鈍器が見える</a>
+    <a class="value" id="value3" style="display: none;">結夢: 「これでずっと一緒だね♪」</a>
+    <a class="value" id="value4" style="display: none;">そこで僕の意識は途絶えた</a>
+    <a class="value" id="value5" style="display: none;">...あれから何日が経っただろうか</a>
+    <a class="value" id="value6" style="display: none;">起きた頃には手に手錠、人一人が入れるくらいの牢屋が備え付けられ</a>
+    <a class="value" id="value7" style="display: none;">毎日朝昼夜にご飯がもってこられる。ほぼ囚人と同じ扱いだ</a>
+    <a class="value" id="value8" style="display: none;">見た所アパートらしき所に住んでいるが以前結夢と同棲していた場所とは違うみたいで</a>
+    <a class="value" id="value9" style="display: none;">現状ここがどこなのかはわからない</a>
+    <a class="value" id="value10" style="display: none;">だが数日過ごしてわかったことが一つある。</a>
+    <a class="value" id="value11" style="display: none;">結夢: 「じゃあそろそろ行ってくるね」</a>
+    <a class="value" id="value12" style="display: none;">そう言うと彼女はドアの音とともに何処かへ去っていった。</a>
+    <a class="value" id="value13" style="display: none;">確信に至ったのは最近だが彼女は毎日夕方に2時間ほど何かをするため外に出る</a>
+    <a class="value" id="value14" style="display: none;">そして今日。この2時間の間に僕はこの牢獄から脱出する決心をつけていた</a>
+    <a class="value" id="value15" style="display: none;">自分: 「まずはこの牢屋からでないと...」</a>
+    <a class="value" id="value16" style="display: none;">【鍵を入手した！】</a>
+    <a class="value" id="value17" style="display: none;">自分: 「よし、開いた。これでスムーズに出れると良いんだけど...」</a>
+    <a class="value" id="value18" style="display: none;">僕は玄関を見つけ出し、開けようとしてみたが、</a>
+    <a class="value" id="value19" style="display: none;">外側からも鍵を閉められる珍しいタイプのドアで、しっかりと鍵がかかっていた。</a>
+    <a class="value" id="value20" style="display: none;">自分: 「やっぱ簡単に出れるはずないか...とりあえず探索してみよう」</a>
+    <a class="value" id="value21" style="display: none;">自分: 「これは...結夢のスマホだ。外に持ち出していないのか？」</a>
+    <a class="value" id="value22" style="display: none;">そう言いながらスマホを見ると奇妙なロック画面が開かれた</a>
+    <a class="value" id="value23" style="display: none;">自分: 「なんだこのロック画面...趣味悪すぎんだろ...」</a>
+    <a class="value" id="value24" style="display: none;">自分: 「まぁいい。パスワードさえ解いて警察に通報すればこっちのもんだからな」</a>
+    <a class="value" id="value25" style="display: none;">自分: 「よし、開いた。あとは通報すれば...」</a>
+    <a class="value" id="value26" style="display: none;">そう言いながら通報をしようとしたが【この番号には掛けられません】とエラーが出てしまった</a>
+    <a class="value" id="value27" style="display: none;">自分: 「このスマホ通報できないように細工されている...?でも誰かに助けを求めないと...」</a>
+    <a class="value" id="value28" style="display: none;">プルルル....</a>
+    <a class="value" id="value29" style="display: none;">親友: 「誰？今忙しいんだけど」</a>
+    <a class="value" id="value30" style="display: none;">彼は親友の小野寺 美樹。小さい頃からの数少ない友達で今は探偵をやっているそうだ。</a>
+    <a class="value" id="value31" style="display: none;">自分: 「頼む美樹!いま元カノに監禁されていて早くここから出ないと帰ってくるんだ!」</a>
+    <a class="value" id="value32" style="display: none;">自分: 「助けてくれ!!!」</a>
+    <a class="value" id="value33" style="display: none;">美樹: 「その声...というより監禁されているって言った？」</a>
+    <a class="value" id="value34" style="display: none;">ことのあらすじを詳しく美樹に話した後、真剣に何かを考えていた美樹が口を開いた</a>
+    <a class="value" id="value35" style="display: none;">美樹: 「玄関以外に出れそうなところはある？」</a>
+    <a class="value" id="value36" style="display: none;">自分: 「部屋にあった小窓ぐらい？でも見た感じ降りれる高さじゃないよ」</a>
+    <a class="value" id="value37" style="display: none;">美樹: 「玄関が鍵で開けるしかないとなるとそこから降りることを考えたほうが現実的だね」</a>
+    <a class="value" id="value38" style="display: none;">美樹: 「降りることを考えるとまずは手錠を外さないとだから外すために鍵を探そう」</a>
+    <a class="value" id="value39" style="display: none;">美樹: 「玄関が鍵で開けるしかないとなるとそこから降りることを考えたほうが現実的だね」</a>
+    <a class="value" id="value40" style="display: none;">もう使えそうなものは特になさそうだ</a>
+    <a class="value" id="value41" style="display: none;">この箱、「手錠の鍵入れ」って書いてある！！！でもパスコードを打たないといけない･･･<br>箱に貼り付けてあるこのメモも関係あるのかな？</a>
+    <a class="value" id="value42" style="display: none;">一旦開けてみよう。</a>
+    <a class="value" id="ittann" style="display: none;">一旦開けてみよう。</a>
+    <a class="value" id="value43" style="display: none;">今回の脱出出口の窓がある。降りるための道具が無いととても降りれそうにない。</a>
+    <a class="value" id="value44" style="display: none;">自分: 「手錠開いた！このあとどうすればいい？」</a>
+    <a class="value" id="living_2" style="display: none;">もう使えそうなものは特になさそうだ</a>
+    <a class="value" id="monooki_2" style="display: none;">この箱･･･やけに怪しいけど何が入っているんだろう？箱に貼り付けてあるこのメモも関係あるのかな？</a>
+    <a class="value" id="rougoku_2" style="display: none;">今回の脱出出口の窓がある。降りるための道具が無いととても降りれそうにない</a>
+    <a class="value" id="clear" style="display: none;">箱を開けると中には登山用のロープが入っていた</a>
+    <a class="value" id="value45" style="display: none;">美樹: 「よし、それじゃあ降りるためになにか使えそうなものはないか探索してくれ」</a>
+    <a class="value" id="value46" style="display: none;">自分: 「ロープ見つけたよ！これなら出れるんじゃないかな！」</a>
+    <a class="value" id="value47" style="display: none;">美樹: 「よくやった！！それじゃあ今から言う手順で出るぞ！」</a>
+    <a class="value" id="value48" style="display: none;">美樹に言われたとおりにロープを結び、慎重に降りた。</a>
+    <a class="value" id="value49" style="display: none;">森の中にあった牢獄をあとにしばらく歩いたら街らしきところにたどり着いた</a>
+    <a class="value" id="value50" style="display: none;">街の人に事情を詳しく説明したらすぐに警察に保護され、</a>
+    <a class="value" id="value51" style="display: none;">その後も大掛かりで捜索されたそうだが、撤去される予定だった団地らしく</a>
+    <a class="value" id="value52" style="display: none;">どの部屋にも人が住んでいた痕跡はなかった。</a>
+    <a class="value" id="value53" style="display: none;">あの部屋は一体何だったのか。その後結夢は何処に消えたのか。</a>
+    <a href="./ed.html" class="value" id="value54" style="display: none;">謎ばかり増えていく今回の事件について、僕は考えるのをやめて静かに暮らすことにした。</a>
+    <script src="style.js"></script>
+</body>
+</html>
